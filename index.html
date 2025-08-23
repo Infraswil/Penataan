@@ -14,17 +14,86 @@
         <link rel="stylesheet" href="css/leaflet-search.css">
         <link rel="stylesheet" href="css/leaflet.photon.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
-        <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
+		<style>
+		  html, body {
+    		margin: 0;
+    		padding: 0;
+    		height: 100%;
+    		overflow: hidden; /* supaya gak muncul scroll horizontal */
+  			}
+
+  		  #map {
+    		width: 100%;
+    		height: 100vh; /* tinggi penuh sesuai layar */
+  			}
         </style>
         <title>Peta Rencana Penataan Pemerintah Kota Surabaya</title>
     </head>
     <body>
+
+    <!-- Popup Petunjuk -->
+    <style>
+    #welcome-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+    }
+    #welcome-overlay.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    #welcome-box {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        max-width: 450px;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+    }
+    #welcome-overlay.show #welcome-box {
+        transform: scale(1);
+    }
+    #welcome-box h2 {
+        margin-top: 0;
+        color: #003366;
+    }
+    #welcome-box p {
+        font-size: 14px;
+        line-height: 1.4;
+        color: #333;
+    }
+    #welcome-btn {
+        margin-top: 15px;
+        padding: 10px 18px;
+        background: #003366;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    #welcome-btn:hover {
+        background: #00509e;
+    }
+    </style>
+
+    <div id="welcome-overlay">
+        <div id="welcome-box">
+            <h2>Selamat Datang di WebGIS Penataan Aset Kota Surabaya</h2>
+            <p>Gunakan opsi <strong>Layers</strong> di pojok kanan atas untuk mengatur tampilan peta.<br>
+            Harap tunggu dan jangan tutup halaman ketika terjadi freeze, sistem sedang memproses masukan.</p>
+            <button id="welcome-btn">Siap, mengerti!</button>
+        </div>
+    </div>
+
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
@@ -602,6 +671,45 @@
         map.on("layerremove", function(){
             resetLabels([layer_BatasAdministrasi_4]);
         });
+				var header = document.createElement("div");
+header.id = "custom-header";
+header.innerHTML = `
+  <img src="images/logo.png" alt="Logo" style="height:50px; margin-left:50px; margin-right:20px;">
+  <div>
+    <div style="font-size:18px; font-weight:bold; color:white;">WebGIS Penataan Aset Kota Surabaya</div>
+    <div style="font-size:12px; color:white;">Badan Perencanaan Pembangunan Daerah, Penelitian, dan Pengembangan Kota Surabaya (terakhir diperbarui pada 23 Agustus 2025)</div>
+  </div>
+`;
+header.style.backgroundColor = "#003366";
+header.style.padding = "10px 20px";
+header.style.display = "flex";
+header.style.alignItems = "center";
+header.style.position = "absolute";
+header.style.top = "0";
+header.style.left = "0";
+header.style.width = "100%";
+header.style.zIndex = "999";
+
+document.body.appendChild(header);
         </script>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const overlay = document.getElementById("welcome-overlay");
+        const btn = document.getElementById("welcome-btn");
+
+        // Ini biar popup selalu muncul saat web dibuka
+        setTimeout(() => overlay.classList.add("show"), 300);
+
+        function closePopup() {
+            overlay.classList.remove("show");
+        }
+
+        btn.addEventListener("click", closePopup);
+        overlay.addEventListener("click", function(e) {
+            if (e.target === overlay) closePopup();
+        });
+    });
+    </script>
     </body>
 </html>
