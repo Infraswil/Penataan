@@ -197,29 +197,6 @@
         .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
             display: none;
         }
-		.fab-button {
- 			position: fixed;
-  			bottom: 20px;
-  			left: 20px;
-  			width: 55px;
-  			height: 55px;
-  			background-color: #003366; /* samakan dengan warna header */
-  			color: white;
-  			border-radius: 50%;
-  			text-align: center;
-  			line-height: 55px;
-  			font-size: 22px;
-  			box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  			transition: all 0.3s ease;
-  			z-index: 9999 !important;
-  			text-decoration: none;
-		}
-		.fab-button:hover {
-  			background-color: #0055aa;
-  			transform: scale(1.1);
-		}
-		.fab-button i {
-  			pointer-events: none;
-}
         
+
 
