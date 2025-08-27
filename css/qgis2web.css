@@ -197,6 +197,12 @@
         .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
             display: none;
         }
+		.leaflet-popup-content a {
+ 			pointer-events: none; 
+  			text-decoration: none; 
+  			color: inherit; 
+		}
         
+
 
 
