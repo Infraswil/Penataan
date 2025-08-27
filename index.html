@@ -216,9 +216,6 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Nama</th>\
                         <td>' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -360,6 +357,10 @@
                         <td class="visible-with-data" id="Kecamatan">' + (feature.properties['Kecamatan'] !== null ? autolinker.link(String(feature.properties['Kecamatan']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+						<th scope="row">Land Use RTRW</th>\
+                        <td class="visible-with-data" id="Rencana RT">' + (feature.properties['Rencana RT'] !== null ? autolinker.link(String(feature.properties['Rencana RT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
 						<th scope="row">Land Use RDTR</th>\
                         <td class="visible-with-data" id="Rencana RD">' + (feature.properties['Rencana RD'] !== null ? autolinker.link(String(feature.properties['Rencana RD']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -374,10 +375,6 @@
                     <tr>\
 						<th scope="row">Rekomendasi BTKD 2019</th>\
                         <td class="visible-with-data" id="Rekomendas">' + (feature.properties['Rekomendas'] !== null ? autolinker.link(String(feature.properties['Rekomendas']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-						<th scope="row">Land Use RTRW</th>\
-                        <td class="visible-with-data" id="Rencana RT">' + (feature.properties['Rencana RT'] !== null ? autolinker.link(String(feature.properties['Rencana RT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -429,12 +426,6 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid_1'] !== null ? autolinker.link(String(feature.properties['fid_1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Kecamatan</th>\
                         <td class="visible-with-data" id="Kecamatan">' + (feature.properties['Kecamatan'] !== null ? autolinker.link(String(feature.properties['Kecamatan']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -461,18 +452,6 @@
                     <tr>\
                         <th scope="row">Luas</th>\
                         <td class="visible-with-data" id="Luas">' + (feature.properties['Luas'] !== null ? autolinker.link(String(feature.properties['Luas']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Tahun_2'] !== null ? autolinker.link(String(feature.properties['Tahun_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Rencana_2'] !== null ? autolinker.link(String(feature.properties['Rencana_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Keterangan_2'] !== null ? autolinker.link(String(feature.properties['Keterangan_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Luas_2'] !== null ? autolinker.link(String(feature.properties['Luas_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Dasar Surat'] !== null ? autolinker.link(String(feature.properties['Dasar Surat']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
