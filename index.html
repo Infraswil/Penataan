@@ -219,19 +219,19 @@
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(String(feature.properties['fid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Name</th>\
+                        <th scope="row">Nama</th>\
                         <td>' + (feature.properties['Name'] !== null ? autolinker.link(String(feature.properties['Name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Shape_Leng</th>\
+                        <th scope="row">Panjang Area</th>\
                         <td>' + (feature.properties['Shape_Leng'] !== null ? autolinker.link(String(feature.properties['Shape_Leng']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Shape_Area</th>\
+                        <th scope="row">Luas Area</th>\
                         <td>' + (feature.properties['Shape_Area'] !== null ? autolinker.link(String(feature.properties['Shape_Area']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Jenis_Bara</th>\
+                        <th scope="row">Jenis Barang Aset</th>\
                         <td>' + (feature.properties['Jenis_Bara'] !== null ? autolinker.link(String(feature.properties['Jenis_Bara']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
@@ -251,15 +251,15 @@
                         <td>' + (feature.properties['Alamat'] !== null ? autolinker.link(String(feature.properties['Alamat']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">No_Sertif</th>\
+                        <th scope="row">Nomor Sertifikat</th>\
                         <td>' + (feature.properties['No_Sertif'] !== null ? autolinker.link(String(feature.properties['No_Sertif']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Tgl_Sertif</th>\
+                        <th scope="row">Tanggal Sertifikat</th>\
                         <td>' + (feature.properties['Tgl_Sertif'] !== null ? autolinker.link(String(feature.properties['Tgl_Sertif']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Penggunaan</th>\
+                        <th scope="row">Penggunaan Eksisting</th>\
                         <td>' + (feature.properties['Penggunaan'] !== null ? autolinker.link(String(feature.properties['Penggunaan']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
@@ -279,11 +279,11 @@
                         <td>' + (feature.properties['Status_Ver'] !== null ? autolinker.link(String(feature.properties['Status_Ver']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Arahan_RDT</th>\
+                        <th scope="row">Arahan</th>\
                         <td class="visible-with-data" id="Arahan_RDT">' + (feature.properties['Arahan_RDT'] !== null ? autolinker.link(String(feature.properties['Arahan_RDT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Potensi_Pe</th>\
+                        <th scope="row">Potensi Pemanfaatan</th>\
                         <td class="visible-with-data" id="Potensi_Pe">' + (feature.properties['Potensi_Pe'] !== null ? autolinker.link(String(feature.properties['Potensi_Pe']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
@@ -360,8 +360,8 @@
                         <td class="visible-with-data" id="Kecamatan">' + (feature.properties['Kecamatan'] !== null ? autolinker.link(String(feature.properties['Kecamatan']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-						<th scope="row">Rencana RD</th>\
-                        <td class="visible-with-data" id="Rencana RDTR">' + (feature.properties['Rencana RD'] !== null ? autolinker.link(String(feature.properties['Rencana RD']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+						<th scope="row">Land Use RDTR</th>\
+                        <td class="visible-with-data" id="Rencana RD">' + (feature.properties['Rencana RD'] !== null ? autolinker.link(String(feature.properties['Rencana RD']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
 						<th scope="row">Luas (m²)</th>\
@@ -372,12 +372,12 @@
                         <td class="visible-with-data" id="Akses">' + (feature.properties['Akses'] !== null ? autolinker.link(String(feature.properties['Akses']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-						<th scope="row">Rekomendas</th>\
-                        <td class="visible-with-data" id="Rekomendasi BTKD 2019">' + (feature.properties['Rekomendas'] !== null ? autolinker.link(String(feature.properties['Rekomendas']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+						<th scope="row">Rekomendasi BTKD 2019</th>\
+                        <td class="visible-with-data" id="Rekomendas">' + (feature.properties['Rekomendas'] !== null ? autolinker.link(String(feature.properties['Rekomendas']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-						<th scope="row">Rencana RT</th>\
-                        <td class="visible-with-data" id="Rencana RTRW">' + (feature.properties['Rencana RT'] !== null ? autolinker.link(String(feature.properties['Rencana RT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+						<th scope="row">Land Use RTRW</th>\
+                        <td class="visible-with-data" id="Rencana RT">' + (feature.properties['Rencana RT'] !== null ? autolinker.link(String(feature.properties['Rencana RT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
