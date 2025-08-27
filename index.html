@@ -275,22 +275,6 @@
                         <th scope="row">Status_Ver</th>\
                         <td>' + (feature.properties['Status_Ver'] !== null ? autolinker.link(String(feature.properties['Status_Ver']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
-                    <tr>\
-                        <th scope="row">Arahan</th>\
-                        <td class="visible-with-data" id="Arahan_RDT">' + (feature.properties['Arahan_RDT'] !== null ? autolinker.link(String(feature.properties['Arahan_RDT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Potensi Pemanfaatan</th>\
-                        <td class="visible-with-data" id="Potensi_Pe">' + (feature.properties['Potensi_Pe'] !== null ? autolinker.link(String(feature.properties['Potensi_Pe']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Potensi_01</th>\
-                        <td class="visible-with-data" id="Potensi_01">' + (feature.properties['Potensi_01'] !== null ? autolinker.link(String(feature.properties['Potensi_01']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Potensi_02</th>\
-                        <td class="visible-with-data" id="Potensi_02">' + (feature.properties['Potensi_02'] !== null ? autolinker.link(String(feature.properties['Potensi_02']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -438,11 +422,11 @@
                         <td class="visible-with-data" id="Alamat">' + (feature.properties['Alamat'] !== null ? autolinker.link(String(feature.properties['Alamat']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Tahun</th>\
+                        <th scope="row">Tahun Penataan</th>\
                         <td class="visible-with-data" id="Tahun">' + (feature.properties['Tahun'] !== null ? autolinker.link(String(feature.properties['Tahun']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Rencana</th>\
+                        <th scope="row">Rencana Penataan</th>\
                         <td class="visible-with-data" id="Rencana">' + (feature.properties['Rencana'] !== null ? autolinker.link(String(feature.properties['Rencana']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
@@ -454,13 +438,12 @@
                         <td class="visible-with-data" id="Luas">' + (feature.properties['Luas'] !== null ? autolinker.link(String(feature.properties['Luas']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Dasar Surat'] !== null ? autolinker.link(String(feature.properties['Dasar Surat']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+				  		<th scope="row">Dasar Surat</th>\
+                        <td class="visible-with-data" id="Dasar Surat">' + (feature.properties['Dasar Surat'] !== null ? autolinker.link(String(feature.properties['Dasar Surat']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Disposisi'] !== null ? autolinker.link(String(feature.properties['Disposisi']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Status Tanah'] !== null ? autolinker.link(String(feature.properties['Status Tanah']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+				  		<th scope="row">Register Tanah</th>\
+                        <td class="visible-with-data" id="Status Tanah">' + (feature.properties['Status Tanah'] !== null ? autolinker.link(String(feature.properties['Status Tanah']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td class="visible-with-data" id="Gambar" colspan="2"><strong>Gambar</strong><br />' + (feature.properties['Gambar'] !== null ? '<img src="images/' + String(feature.properties['Gambar']).replace(/[\\/:]/g, '_').trim().replace(/'/g, '\'').replace(/"/g, '&quot;') + '">' : '') + '</td>\
